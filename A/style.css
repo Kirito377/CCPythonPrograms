@@ -1,0 +1,14 @@
+body{
+    background-color: aqua;
+    color: red;
+}
+img{
+    margin : 100px;
+    border-color: red;
+    border-radius: 12%;
+    stroke: red;
+    stroke-width: 12%;
+}
+form input{
+    color: green;
+}
