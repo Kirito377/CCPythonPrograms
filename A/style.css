@@ -1,14 +1,35 @@
-body{
-    background-color: aqua;
-    color: red;
+*{
+    background-color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px;
+}
+nav{
+    display: flex;
 }
 img{
-    margin : 100px;
-    border-color: red;
-    border-radius: 12%;
-    stroke: red;
-    stroke-width: 12%;
+    height: 40px;
+    width: 100px;
+
 }
-form input{
-    color: green;
+ul{
+    display: flex;
+    list-style: none;
+}
+ul li{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+ul li a{
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+ul li a:hover{
+    color: white;
+    background-color: blue;
 }
