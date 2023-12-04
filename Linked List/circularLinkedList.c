@@ -12,20 +12,7 @@ void traverseNode(struct Node *node){
         printf("%d ", p->data);
         p = p->next;
     }while (p != node);
-    printf("\n");
-}
-
-struct Node *insert(struct Node *head, int data){
-    struct Node *p= head;
-    struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
-
-    while (p->next !=head){
-        p=p->next;
-    }
-    newNode->data = data;
-    newNode->next = p->next;
-    p->next = newNode;
-    return head;
+    
 }
 
 int main(){
@@ -46,8 +33,11 @@ int main(){
     third->data = 30;
     third->next = head;
 
-    traverseNode(head);  
-    head = insert(head,11);  
-    traverseNode(head);  
+    traverseNode(head);    
+    
+    free(third);
+    free(second);
+    free(head);
+
     return 0;
 }

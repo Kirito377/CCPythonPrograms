@@ -61,5 +61,10 @@ int main(){
     head = addIndex(head, 55, 3);
     traverseNode(head);
 
+    free(head);
+    free(node1);
+    free(node2);
+    free(node3);
+
     return 0;
 }

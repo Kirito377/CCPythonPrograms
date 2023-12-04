@@ -14,17 +14,18 @@ void show(Node *n){
     printf("\n");
 }
 
-Node *deleteEnd(Node *head){
-    Node *p = head;
-    Node *q =  head->next;
-
-    while (q->next!=NULL){
-        p=p->next;
-        q=q->next;        
+Node *deleteBeg(Node *head){
+    if (head == NULL)
+    {
+        printf("List is empty");
+        return NULL;
     }
-    p->next = NULL;
-    free(q); 
-    return head;   
+    
+    Node *temp = head;
+    head = head->next;
+    printf("%d is deleted\n",temp->data);
+    free(temp);
+    return head;
 }
 
 int main(){
@@ -60,7 +61,13 @@ int main(){
     node4->next = NULL;
 
     show(head);
-    head = deleteEnd(head);
+    head = deleteBeg(head);
     show(head);
+
+    free(head);
+    free(node1);
+    free(node2);
+    free(node3);
+    free(node4);
     return 0;
 }

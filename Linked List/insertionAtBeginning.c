@@ -38,5 +38,8 @@ int main(){
     traverse(head);
     head = insertionAtBeginning(head, 5);
     traverse(head);
+
+    free(head);
+    free(node2);
     return 0;
 }

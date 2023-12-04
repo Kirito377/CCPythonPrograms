@@ -52,5 +52,9 @@ int main(){
     head = addEnd(head,5);
     head = addEnd(head,56);
     head = addEnd(head,7);
+
     show(head);
+    free(head);
+    free(node1);
+    free(node2);
 }

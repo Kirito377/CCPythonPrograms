@@ -6,12 +6,11 @@ struct Node{
 };
 
 void traverseNode(struct Node *node){
-    struct Node *p = node;
-
-    do{
-        printf("%d ", p->data);
-        p = p->next;
-    }while (p != node);
+    while (node != NULL)
+    {
+        printf("%d \n", node->data);
+        node = node->next;
+    }
     
 }
 
@@ -24,15 +23,20 @@ int main(){
     second = (struct Node*)malloc(sizeof(struct Node));
     third = (struct Node*)malloc(sizeof(struct Node));
 
-    head->data = 10;
+    head->data = 12;
     head->next = second;
 
-    second->data = 20;
+    second->data = 111;
     second->next = third;
 
-    third->data = 30;
-    third->next = head;
+    third->data = 42;
+    third->next = NULL;
 
     traverseNode(head);    
+
+    free(head);
+    free(second);
+    free(third);
+
     return 0;
 }

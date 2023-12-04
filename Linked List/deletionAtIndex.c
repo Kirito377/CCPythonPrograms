@@ -17,13 +17,25 @@ void show(Node *n){
 Node *deleteIndex(Node *head, int n){
     Node *p = head;
     Node *q =  head->next;
-    int i=0;
+
+    if (head == NULL)
+    {
+        printf("List is empty");
+        return NULL;
+    }
+    int i=1;
     while (i!=n-1){
         p=p->next;
         q=q->next;  
+        if (q==NULL)
+        {
+            printf("Node doesn't exisx \n");
+            return head;
+        }
         i++;      
     }
     p->next = q->next;
+    printf("%d is deleted\n",q->data);
     free(q); 
     return head;   
 }
@@ -63,5 +75,11 @@ int main(){
     show(head);
     head = deleteIndex(head,2);
     show(head);
+
+    free(head);
+    free(node1);
+    free(node2);
+    free(node3);
+    free(node4);
     return 0;
 }
